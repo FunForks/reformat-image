@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image</title>
+  
+  <style>
+
+  /* To see the effect of each of the properties used, comment
+     out each line, one by one, and see how the display changes.
+   */
+
+  img {
+    /* Show images one above the other */
+    display: block;
+    /* Centre the images horizontally */
+    margin: 0 auto;
+    /* Ensure that the image is not distorted as it is resized */
+    object-fit: cover;
+  }
+
+  #hair {
+    /* Reduce the height as the page becomes narrower */
+    max-height: 30vw;
+    /* Make the image square when it gets small */
+    min-width: 200px;
+    min-height: 200px;
+    /* Cut off the top and bottom as the height decreases */
+    /* (The 'x' position actually has no effect) */
+    object-position: center;
+  }
+
+  #head {
+    /* Reduce the width as the page becomes narrower */
+    max-width: 50%;
+    /* Make the image square when it gets small */
+    min-width: 400px;
+    min-height: 400px;
+    /* Ensure that the top right of the picture is always seen */
+    object-position: right top;
+  }
+  </style>
+  
+</head>
+<body>
+  <img
+    id="hair"
+    src="img/hair.png"
+    alt="hair"
+  />
+
+  <img
+    id="head"
+    src="img/head.webp"
+    alt="head"
+  />
+</body>
+</html>
